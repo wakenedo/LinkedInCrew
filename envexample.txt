@@ -1,0 +1,6 @@
+Create a .env with these keys and change the values to the appropriate ones for your project
+
+LINKEDIN_EMAIL=your_email
+LINKEDIN_PASSWORD=your_password
+LINKEDIN_PROFILE_NAME=your_profile_name
+OPENAI_API_KEY=your_openai_key
