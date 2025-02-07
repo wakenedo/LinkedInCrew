@@ -1,0 +1,19 @@
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file (if using dotenv)
+load_dotenv()
+
+# LinkedIn credentials
+LINKEDIN_EMAIL = os.getenv("LINKEDIN_EMAIL")
+LINKEDIN_PASSWORD = os.getenv("LINKEDIN_PASSWORD")
+LINKEDIN_PROFILE_NAME = os.getenv("LINKEDIN_PROFILE_NAME")
+
+# OpenAI API Key (or any other API keys you need)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+# Validate required env variables
+required_vars = ["LINKEDIN_EMAIL", "LINKEDIN_PASSWORD", "OPENAI_API_KEY"]
+missing_vars = [var for var in required_vars if not os.getenv(var)]
+if missing_vars:
+    raise ValueError(f"Missing required environment variables: {', '.join(missing_vars)}")
